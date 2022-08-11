@@ -1,4 +1,3 @@
-from lib2to3.pgen2 import token
 from tokenize import Token
 import keras
 from flask import Flask, request, render_template, jsonify
