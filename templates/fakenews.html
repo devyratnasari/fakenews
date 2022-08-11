@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News AI Enterprise</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+</head>
+<body style="height: 100vh;">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script defer src="{{url_for('static', filename='script.js')}}"></script>
+  <form id="sign-form" action="/predict" method="post">
+    <div class="sign-in">
+      <div class="title">
+        <h1>
+          Fake News Detection
+        </h1>
+      </div>
+  
+      <div class="form-group">
+        <label for="news" class="form-label">Input news</label>
+        <input type="text" name="news" id="news">
+    </div>
+    <button type="submit" class="btn-primary">Predict</button>
+    {{preds}}
+    </div>
+    </form>
+    <footer>
+      <a href="https://github.com/PriyankaAkaPri/Fake-News-Detector">
+        <img src="{{url_for('static', filename='github.svg')}}" alt="" style="width: 25; height:26px;">© Devy Ratnasari and Priyanka Singh
+      </a>
+    </footer>
+</body>
+
+
+
+
+</body>
+</html>
